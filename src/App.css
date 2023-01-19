@@ -1,38 +1,183 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 1440px;
+  width: 100%;
+  max-width: 1100px;
+  padding: 15px 100px;
+  margin: 0 auto;
+}
+.header {
+  display: flex;
+}
+.logo {
+  margin-right: auto;
+}
+li {
+  display: flex;
+  margin-right: 15px;
+  cursor: pointer;
+}
+h4 {
+  cursor: pointer;
+}
+h4:hover,
+li:hover {
+  color: hsl(5, 85%, 63%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebar > h5:hover {
+  color: hsl(35, 77%, 62%);
+}
+.navbar {
+  display: flex;
+  gap: 7px;
+  list-style: none;
+  align-items: center;
+  color: hsl(236, 13%, 42%);
+}
+.HeroSplitDiv {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.hero {
+  height: auto;
+  width: 100%;
+  padding-right: 30px;
+}
+.heroImage {
+  width: 100%;
+}
+.heroh1 {
+  font-size: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.button {
+  background-color: hsl(5, 85%, 63%);
+  border: none;
+  padding: 10px;
+  color: white;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: hsl(240, 100%, 5%);
+}
+.Herowrapper {
+  display: grid;
+  grid-template-columns: 74% 25%;
+  gap: 0;
+}
+.sidebar {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  padding: 10px;
+  background-color: hsl(240, 100%, 5%);
+}
+
+.sidebar > .h1 {
+  color: hsl(35, 77%, 62%);
+  font-weight: 800;
+}
+.sidebar > h5 {
   color: white;
+  margin-bottom: 0;
+  cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
+h2,
+p {
+  color: hsl(236, 13%, 42%);
+  line-height: 1.4;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footer {
+  display: grid;
+  grid-template-columns: 38% 28% 26%;
+  justify-content: space-between;
+}
+.footerContent > img {
+  width: 70px;
+  height: auto;
+  margin-right: 15px;
+}
+.footerContent {
+  display: flex;
+}
+.footerContent > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.nav,
+.webmob {
+  display: none;
+}
+@media (max-width: 500px) {
+  .HeroSplitDiv,
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
   }
-  to {
-    transform: rotate(360deg);
+  .webmob {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .heroImage {
+    display: none;
+  }
+  p,
+  .heroh1 {
+    max-width: 350px;
+  }
+  .sidebar {
+    height: 350px;
+  }
+  .footer {
+    gap: 20px;
+  }
+  .footerContent {
+    gap: 10px;
+  }
+  .navbar {
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    height: 100vh;
+    background-color: hsl(36, 100%, 99%);
+  }
+  .header {
+    flex-direction: row;
+    position: relative;
+  }
+  .navWrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 500px;
+    width: 50%;
+  }
+  .nav {
+    display: block;
+    z-index: 11;
+    cursor: pointer;
+  }
+  #close {
+    display: none;
+  }
+  #open {
+    display: block;
+  }
+  .hero {
+    padding-right: 0px;
   }
 }
