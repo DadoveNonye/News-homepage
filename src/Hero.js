@@ -4,8 +4,8 @@ function Hero() {
   return (
     <div className="Herowrapper container">
       <div className="hero ">
-        <img className="heroImage" src={webDesktop} />
-        <img className="webmob" src={webmobile} />
+        <img className="heroImage" alt="hero image" src={webDesktop} />
+        <img className="webmob" alt="hero image" src={webmobile} />
         <div className="HeroSplitDiv">
           <h1 className="heroh1">The Bright Future Of Web 3.0?</h1>
           <div className="hhh">
